@@ -1,0 +1,13 @@
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 [ngStyle]="{color: getColor()}">{{postTitle}}</h4>
+    </div>
+    <div class="col-md-4 offset-md-4">
+    <p>{{ lastUpdate | date: 'short' }}</p>
+    </div>
+    </div>
+    <p [ngStyle]="{color: getColor()}">{{postContent}}</p>
+    <button class="btn btn-success" (click)="onLike()">Love ! {{postloveIts}}</button>
+    <button class="btn btn-danger" (click)="onDontLike()">Don't Love ! {{postdontloveIts}} </button>
+</li>
